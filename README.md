@@ -48,7 +48,7 @@ Autonomously identifies top relevant threads (e.g., `"PDF OCR"`) and uses the `a
 
 Beyond the core Python engine, this system is designed to plug into a production-grade GTM stack.
 
-***Sumble Intent Trigger:** The pipeline begins with Sumble. By leveraging Sumble's knowledge graph (instead of blindly scraping Hacker News), we identify companies showing active "buyer intent" (e.g., technical migrations or hiring for specialized AI roles). This acts as the macro-trigger for the JigsawStack engine to begin targeted context extraction.
+**Sumble Intent Trigger:** The pipeline begins with Sumble. By leveraging Sumble's knowledge graph (instead of blindly scraping Hacker News), we identify companies showing active "buyer intent" (e.g., technical migrations or hiring for specialized AI roles). This acts as the macro-trigger for the JigsawStack engine to begin targeted context extraction.
 
 **The n8n Orchestrator:** The Python scripts act as custom worker nodes within an n8n workflow. Every "High Intent" signal detected by the Sentiment Chain triggers a webhook that starts the downstream enrichment process.
 
