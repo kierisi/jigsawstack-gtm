@@ -14,7 +14,6 @@ This engine is a concrete implementation of the Context-Centric Architecture def
 
 ### 1. 🌾 The Intent Harvester · `intent-harvester.py`
 
-| | |
 |---|---|
 | **Layer** | Context Construction |
 | **Goal** | Macro-level prospecting across Hacker News |
@@ -25,9 +24,8 @@ Scans multiple pages for AI/ML keywords, handles pagination, and extracts metada
 
 ---
 
-### 2. 🎯 The Autonomous Scorer · `comment-scorer.py`
+### 2. 🎯 The Autonomous Scorer · [`comment-scorer.py`](https://github.com/kierisi/jigsawstack-gtm/blob/main/comment-scorer.py)
 
-| | |
 |---|---|
 | **Layer** | Action Layer / Controller |
 | **Goal** | Deep-dive intent analysis via Algolia-backed search |
@@ -38,7 +36,6 @@ Autonomously identifies top relevant threads (e.g., `"PDF OCR"`) and uses the `a
 
 ### 3. 🔗 The Sentiment Chain · `comment-scorer-sentiment.py`
 
-| | |
 |---|---|
 | **Layer** | Specialized Model Chain |
 | **Architecture** | `ai_scrape` (DOM Extraction) → `sentiment` API (Evaluation) |
