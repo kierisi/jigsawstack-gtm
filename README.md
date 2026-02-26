@@ -6,14 +6,14 @@ An autonomous Go-To-Market pipeline built with the JigsawStack SDK — architect
 
 ## 🏗️ The "Interfaze" Architecture
 
-This engine is a concrete implementation of the Context-Centric Architecture defined in [Interfaze (arXiv:2602.04101v1)](https://arxiv.org/abs/2602.04101v1). It offloads expensive LLM reasoning by utilizing JigsawStack's specialized **Small Language Models (SLMs)** for perception and classification.
+This engine is inspired by the Context-Centric Architecture defined in [Interfaze (arXiv:2602.04101v1)](https://arxiv.org/abs/2602.04101v1). It offloads expensive LLM reasoning by utilizing JigsawStack's specialized **Small Language Models (SLMs)** for perception and classification.
 
 ---
 
 ## The Three-Stage Engine
 
 ### 1. 🌾 The Intent Harvester · `intent-harvester.py`
-
+|||
 |---|---|
 | **Layer** | Context Construction |
 | **Goal** | Macro-level prospecting across Hacker News |
