@@ -12,7 +12,7 @@ This engine is inspired by the Context-Centric Architecture defined in [Interfaz
 
 ## The Three-Stage Engine
 
-### 1. 🌾 The Intent Harvester · `intent-harvester.py`
+### 1. 🌾 The Intent Harvester · [`intent-harvester.py`](https://github.com/kierisi/jigsawstack-gtm/blob/main/intent-harvester.py)
 |||
 |---|---|
 | **Layer** | Context Construction |
@@ -34,7 +34,7 @@ Autonomously identifies top relevant threads (e.g., `"PDF OCR"`) and uses the `a
 
 ---
 
-### 3. 🔗 The Sentiment Chain · `comment-scorer-sentiment.py`
+### 3. 🔗 The Sentiment Chain · [`comment-scorer-sentiment.py`](https://github.com/kierisi/jigsawstack-gtm/blob/main/comment-scorer-sentiment.py)
 |||
 |---|---|
 | **Layer** | Specialized Model Chain |
@@ -48,7 +48,7 @@ Autonomously identifies top relevant threads (e.g., `"PDF OCR"`) and uses the `a
 
 Beyond the core Python engine, this system is designed to plug into a production-grade GTM stack.
 
-**Sumble Intent Trigger:** The pipeline begins with Sumble. By leveraging Sumble's knowledge graph (instead of blindly scraping Hacker News), we identify companies showing active "buyer intent" (e.g., technical migrations or hiring for specialized AI roles). This acts as the macro-trigger for the JigsawStack engine to begin targeted context extraction.
+**Sumble Intent Trigger:** The pipeline begins with Sumble. By leveraging Sumble's knowledge graph (instead of blindly scraping Hacker News), we identify companies showing active "buyer intent" (e.g., technical migrations or hiring for specialized AI roles). This acts as the macro-trigger for the JigsawStack engine to begin targeted context extraction. This is still in development, but the initial script iteration can be found in [`sumble-integration.py`](https://github.com/kierisi/jigsawstack-gtm/blob/main/sumble-integration.py)
 
 **The n8n Orchestrator:** The Python scripts act as custom worker nodes within an n8n workflow. Every "High Intent" signal detected by the Sentiment Chain triggers a webhook that starts the downstream enrichment process.
 
